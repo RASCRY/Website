@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <link rel="icon" type="image/png" href="img/logo.png">
+        <title>RASCRY Foundation</title>
+    </head>
+    <body>
+        <main>
+            <header>
+                <div class="row">
+                    <div class="col-md-6 logo-top">
+                        <img src="img/logo.png" width="100">
+                    </div>
+                    <div class="col-md-6">
+                        <h1>RASCRY Foundation</h1>
+                        <p>The European free software foundation.</p>
+                    </div>
+                    <div class="col-md-6 logo">
+                        <img src="img/logo.png" width="100">
+                    </div>
+                </div>
+            </header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Homepage</a></li>
+                    <li><a href="https://github.com/RASCRY/" target="_blank">GitHub</a></li>
+                    <li><a href="https://github.com/RASCRY/" target="_blank">Software</a></li>
+                    <li><a href="mailto:hello@rascry.org">Contact us</a></li>
+                    <li><a href="https://github.com/RASCRY/" target="_blank">Downloads</a></li>
+                </ul>
+            </nav>
+            <div class="content">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h2>Supporting European software</h2>
+                        <p>RASCRY is a foundation based on European values in open source software, all of our projects that are not licensed under the RASCRY-MIT software license are licensed under EUPL-v1.2 (European Union Public License). RASCRY focuses on bringing free, open source software that is free from independent from money hungry corporations to the world for everyone to enjoy.<span class="disclaimer">*</span></p>
+                        <small><span class="disclaimer">*</span>This does not apply to companies, states, individuals and / or organisations not recognized or against the State of Arctischia.</small>
+                    </div>
+                    <div class="col-md-4 text-right">
+                        <img src="img/logo.png" width="150">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 mt-4 text-centre">
+                        <h2>With members from all across Europe</h2>
+                    </div>
+                    <div class="col-md-4 text-centre profile">
+                        <img src="img/a_3cb569b1219dfe0de1d3f193394af0c7.gif">
+                        <h3>Just "Fred"</h3>
+                    </div>
+                    <div class="col-md-4 text-centre profile">
+                        <img src="img/ca8d9514fa249433cfaaa12fd496e456.png">
+                        <h3>George Swezčowski</h3>
+                    </div>
+                    <div class="col-md-4 text-centre profile">
+                        <img src="img/40d0b3eb0e4d1a273713b4642c2f1bae.png">
+                        <h3>Petahar Markov</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 mt-4 text-centre">
+                        <h2>Projects</h2>
+                    </div>
+                    <% var i = 0; %>
+                    <% repos.forEach(function(repo){ %>
+                        <% i++; %>
+                        <% if (i < 12) { %>
+                            <% if (repo.fork == false) { %>
+                                <div class="col-md-3 project">
+                                    <h3><%= repo.name %></h3>
+                                    <a href="<%= repo.html_url %>" class="btn btn-primary" target="_blank">View on github</a>
+                                </div>
+                            <% } %>
+                        <% } %>
+                    <% }); %>
+                </div>
+            </div>
+            <footer>
+                <p>Copyright under EUPL-v1.2 &copy; RASCRY Foundation S.A.R.L.</p>
+            </footer>
+        </main>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    </body>
+</html>
